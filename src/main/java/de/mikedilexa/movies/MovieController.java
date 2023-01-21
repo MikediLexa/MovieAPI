@@ -3,7 +3,6 @@ package de.mikedilexa.movies;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +25,7 @@ public class MovieController {
 
     @GetMapping("/{imdbId}")
     public ResponseEntity<Optional <Movie>> getSingleMovie(@PathVariable String imdbId) {
-        return new ResponseEntity<Optional<Movie>> (movieService.singlMovie(imdbId), HttpStatus.OK);
+        return new ResponseEntity<Optional<Movie>> (movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 
 }
